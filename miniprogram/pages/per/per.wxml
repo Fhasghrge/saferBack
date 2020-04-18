@@ -1,71 +1,90 @@
-<!--pages/per/per.wxml-->
-<!--页面根标签-->
+<!-- pages/per/per.wxml -->
+<!-- 页面根标签 -->
 <!-- <view class="content"> -->
-	<!--pics文件夹下的background.jpg文件-->
-	<!-- <image class='background' src="https://6765-geekclub-release-1300915894.tcb.qcloud.la/backgroud012.png" mode="aspectFill"></image> -->
-	<!--页面其它部分-->
+<!-- pics文件夹下的background.jpg文件 -->
+<!-- <image class='background' src="https://6765-geekclub-release-1300915894.tcb.qcloud.la/backgroud012.png" mode="aspectFill"></image> -->
+<!-- 页面其它部分 -->
 <!-- </view> -->
-
-<!--index.wxml-->
-<view class="page" data-weui-theme="{{theme}}">
+<!-- index.wxml -->
+<view id="page" data-weui-theme="{{theme}}">
     <view class="page__hd">
-        <view class="page__title" >进行流程：</view>
+        <view class="page__title">进行流程：</view>
         <view class="page__desc">
-        1.首先在学习西门门口核实进校资格，你需要出示你的天府健康码;
+            1.首先在学习西门门口核实进校资格，你需要出示你的天府健康码;
         2.填报健康状况信息表；
         3.领取你的进校审批单；
         4.宿舍入住办理；
         5.确认报备。
         </view>
     </view>
-<view class="weui-panel__bd" style="width:90%;margin:auto;">
-    
-              <navigator bindtap="onCheckAuth"  style="border:0px solid #ccc;border-radius:15px;background-color: #fff;" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg" >
-                        <image class="weui-media-box__thumb" src="https://6765-geekclub-release-1300915894.tcb.qcloud.la/logo007.png" />
-                    </view>
-                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title" style="font-weight:560;">天府健康通</view>
-                        <view class="weui-media-box__desc">查看健康码、注册健康码</view>
-                    </view>
-              </navigator>
-              <!--订阅打卡推送-->
-              <view style="margin-top:20px">
-                 <navigator bindtap="onCheckAuth"  style="border:0px solid #ccc;border-radius:15px;background-color: #fff;margin-top:20px" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                        <image class="weui-media-box__thumb" src="https://6765-geekclub-release-1300915894.tcb.qcloud.la/logo007.png" />
-                    </view>
-                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title" style="font-weight:560;">健康状况信息表</view>
-                        <view class="weui-media-box__desc">请如实填写你现在的健康状况！</view>
-                    </view>
-              </navigator>
-              </view>
-              <view style="margin-top:20px">
-                 <navigator bindtap="onCheckAuth"  style="border:0px solid #ccc;border-radius:15px;background-color: #fff;margin-top:20px" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                        <image class="weui-media-box__thumb" src="https://6765-geekclub-release-1300915894.tcb.qcloud.la/logo007.png" />
-                    </view>
-                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title" style="font-weight:560;">进校审批单</view>
-                        <view class="weui-media-box__desc">该审批单需要最后报备给你的辅导员，谨慎填写，签名处由相关人员签名。</view>
-                    </view>
-              </navigator>
-              </view>
-              <view style="margin-top:20px">
-                 <navigator bindtap="onCheckAuth"  style="border:0px solid #ccc;border-radius:15px;background-color: #fff;margin-top:20px" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                        <image class="weui-media-box__thumb" src="https://6765-geekclub-release-1300915894.tcb.qcloud.la/logo007.png" />
-                    </view>
-                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title" style="font-weight:560;">宿舍入住办理</view>
-                        <view class="weui-media-box__desc">宿舍管理人员将根据你的健康状况和资料情况给你办理入住</view>
-                    </view>
-              </navigator>
-              </view>
-      </view>
-<view class="weui-form__opr-area" style="margin-top:50rpx">
-			<a class="weui-btn weui-btn_primary">确认报备</a>
-		</view>
+    <view class="weui-panel__bd" style="width:90%;margin:auto;">
+        <view class="table">
+            <navigator 
+            bindtap="onCheckAuth" 
+            class="weui-media-box weui-media-box_appmsg" 
+            hover-class="weui-cell_active">
+                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                    <image 
+                    class="weui-media-box__thumb" 
+                    src="../../images/chengdu_table.png" />
+                </view>
+                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                    <view class="navTitle">天府健康通</view>
+                    <view class="weui-media-box__desc">查看健康码、注册健康码</view>
+                </view>
+            </navigator>
+        </view>
+        <!-- 订阅打卡推送 -->
+        <view class="table">
+            <navigator
+            url="../healthyTable/healthyTable"
+            class="weui-media-box weui-media-box_appmsg" 
+            hover-class="weui-cell_active">
+                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                    <image 
+                    class="weui-media-box__thumb" 
+                    src="../../images/health_table.png" />
+                </view>
+                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                    <view class="navTitle">健康状况信息表</view>
+                    <view class="weui-media-box__desc">请如实填写你现在的健康状况！</view>
+                </view>
+            </navigator>
+        </view>
+        <view class="table">
+            <navigator 
+            bindtap="onCheckAuth" 
+            class="weui-media-box weui-media-box_appmsg" 
+            hover-class="weui-cell_active">
+                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                    <image 
+                    class="weui-media-box__thumb" 
+                    src="../../images/check_table.png" />
+                </view>
+                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                    <view class="navTitle">进校审批单</view>
+                    <view class="weui-media-box__desc">该审批单需要最后报备给你的辅导员，谨慎填写，签名处由相关人员签名。</view>
+                </view>
+            </navigator>
+        </view>
+        <view class="table">
+            <navigator 
+            bindtap="onCheckAuth" 
+            class="weui-media-box weui-media-box_appmsg" 
+            hover-class="weui-cell_active">
+                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                    <image 
+                    class="weui-media-box__thumb" 
+                    src="../../images/house_table.png" />
+                </view>
+                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                    <view class="navTitle">宿舍入住办理</view>
+                    <view class="weui-media-box__desc">宿舍管理人员将根据你的健康状况和资料情况给你办理入住</view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+    <view class="weui-form__opr-area" style="margin-top:50rpx">
+        <a class="weui-btn weui-btn_primary">确认报备</a>
+    </view>
 </view>
-
