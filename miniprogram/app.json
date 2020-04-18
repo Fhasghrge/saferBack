@@ -1,0 +1,46 @@
+{
+  "pages":[
+    "pages/id/id",
+    "pages/tra/tra",
+    "pages/per/per",
+    "pages/inf/inf",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Back",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/id/id",
+      "text": "身份认证",
+      "iconPath": "images/infopersonal.png"
+    },
+    {
+      "pagePath": "pages/tra/tra",
+      "text": "行程报告",
+      "iconPath": "images/address.png"
+    },
+    {
+      "pagePath": "pages/per/per",
+      "text": "进校啦",
+      "iconPath": "images/safety.png" 
+    },
+    {
+      "pagePath": "pages/inf/inf",
+      "text": "个人信息",
+      "iconPath": "images/nickname.png"
+    }
+
+  ]
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wxb032bc789053daf4",
+    "wx34b9f47827e4801d"
+  ],
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
