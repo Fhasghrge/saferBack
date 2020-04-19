@@ -1,66 +1,93 @@
-// pages/healthyTable/healthyTable.js
+import areaList from '../../utils/area'// 导入省市区数据
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
+    show: false, // 显式选择省市区
+    areaList,
+    Area: '当前所在地',
+    detailAdd: '请输入详细地址',
+    Date: '获取当前时间',
+    DateGet: false,
+    healths: [
+      {
+        id: 1,
+        checked:false,
+        info: '本人健康情况'
+      },
+      {
+        id: 2,
+        checked:false,
+        info: '两周内有湖北旅行史或居住史'
+      },
+      {
+        id: 3,
+        checked:false,
+        info: '两周内接触湖北返乡人员'
+      },
+      {
+        id:4,
+        checked:false,
+        info: '接触疑似或确诊'
+      },
+      {
+        id:5,
+        checked:false,
+        info: '政府隔离'
+      },
+      {
+        id:6,
+        checked:false,
+        info: '医学隔离'
+      },
+      {
+        id:7,
+        checked:false,
+        info: '是否确诊'
+      },
+      {
+        id:8,
+        checked:false,
+        info: '是否在校'
+      },
+      {
+        id:9,
+        checked:false,
+        info: '家庭成员健康情况' 
+      },
+    ],
+    more: ''
 
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  showPopup() { // 打开省市区选择
+    this.setData({show: true})
+    console.log('弹出')
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  onClose() { // 关闭省市区选择
+    this.setData({show: false})
+    console.log('关闭')
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  confirmLoct(event) { // 确定省市区
+    console.log(event.detail.values.map(item => item.name))
+    let selectedArea = event.detail.values.map(item => item.name).join(' ')
+    this.setData({Area: selectedArea})
+    this.setData({show: false})
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  onCancel() { // 取消选择省市区
+    this.setData({show: false})
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  onChange(event) { // 开关改变
+    console.log(event)
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  showTime () { // 获取当前时间
+    if(!this.data.DateGet){
+      const date = new Date()
+      this.setData({Date: this.data.toLocalString()})
+      this.setData({DateGet: true})// 获取时间之后就禁止再次获取
+    }
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+  inputAdd(event) { // 获取详细地址
+    this.setData({detailAdd:event.detail})
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  inputMore(event) { // 获取备注
+    this.setData({more: event.detail})
   }
 })

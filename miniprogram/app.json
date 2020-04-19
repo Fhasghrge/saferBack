@@ -1,12 +1,12 @@
 {
   "pages":[
+    "pages/healthyTable/healthyTable",
     "pages/id/id",
-    "pages/per/per",
     "pages/tra/tra",
+    "pages/per/per",
     "pages/inf/inf",
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/healthyTable/healthyTable"
+    "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -15,9 +15,6 @@
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
-    "backgroundColor": "#DDD",
-    "borderStyle": "white",
-    "selectedColor": "#4b6584",
     "list": [{
       "pagePath": "pages/id/id",
       "text": "身份认证",
@@ -49,6 +46,5 @@
     "wxb032bc789053daf4",
     "wx34b9f47827e4801d"
   ],
-  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
