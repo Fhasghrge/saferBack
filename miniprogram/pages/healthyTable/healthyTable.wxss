@@ -18,7 +18,7 @@
 }
 #more-info {
   margin: 0 5vw;
-  box-shadow: 0 0 8px burlywood;
+  box-shadow: 0 0 8px rgb(221, 218, 213);
 }
 #more-info > view {
   margin: 2vh auto;

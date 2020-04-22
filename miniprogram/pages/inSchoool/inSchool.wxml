@@ -1,0 +1,7 @@
+<view>
+<view id="in-header">进校审批单</view>
+<view id="in-mian">
+  表单等待设计稿
+</view>
+<view id="in-footer">备注： 入住宿舍之后应将此表交至学生辅导员处</view>
+</view>

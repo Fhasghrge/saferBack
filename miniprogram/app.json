@@ -1,7 +1,8 @@
 {
   "pages":[
-    "pages/healthyTable/healthyTable",
     "pages/id/id",
+    "pages/inSchoool/inSchool",
+    "pages/healthyTable/healthyTable",
     "pages/tra/tra",
     "pages/per/per",
     "pages/inf/inf",
