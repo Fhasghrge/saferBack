@@ -10,11 +10,11 @@
     <view class="page__hd">
         <view class="page__title">进行流程：</view>
         <view class="page__desc">
-            1.首先在学习西门门口核实进校资格，你需要出示你的天府健康码;
-        2.填报健康状况信息表；
-        3.领取你的进校审批单；
-        4.宿舍入住办理；
-        5.确认报备。
+            <view>1.首先在学习西门门口核实进校资格，你需要出示你的天府健康码;</view>
+            <view>2.填报健康状况信息表；</view>
+            <view>3.领取你的进校审批单；</view>
+            <view>4.宿舍入住办理；</view>
+            <view>5.确认报备。</view>
         </view>
     </view>
     <view class="weui-panel__bd" style="width:90%;margin:auto;">

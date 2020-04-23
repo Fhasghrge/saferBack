@@ -22,11 +22,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.showModal({
-      title: '提示',
-      content: '你可以提前填入行程信息，但是只有你被批准进校之后，你的信息才会被受理！',
-      showCancel: false
-    })
+    // wx.showModal({
+    //   title: '提示',
+    //   content: '你可以提前填入行程信息，但是只有你被批准进校之后，你的信息才会被受理！',
+    //   showCancel: false
+    // })
   },
 
   /**

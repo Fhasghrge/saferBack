@@ -2,13 +2,18 @@
 <!--pages/plugin/route-plan.wxml-->
 <view class="map-view-container">
   <view class="map-view-content">
-    <view class="introduce">请通过以下操作报备你返校的行程：
-    1.输入起点位置；
-    2.输入终点位置（可选择中途到达终点，因本次进校检查点设置电子科技大学清水河校区西门，建议直接选择电子科技大学清水河校区西门）；
-		3.如有需要，本小程序提供导航功能；
-    4.出行票据上传；
-    5.提交。
-    </view>
+    <view class="introduce">
+        <view id="itr-title">请通过以下操作报备你返校的行程：</view>
+        <view id="itr-conts">
+            <view>1.输入起点位置；</view>
+            <view>2.输入终点位置</view>
+            <view>3.出行票据上传；</view>
+            <view>4.提交。</view>
+        </view>
+        <text>
+            可选择中途到达终点，因本次进校检查点设置电子科技大学清水河校区西门，建议直接选择电子科技大学清水河校区西门；
+        </text>
+        </view>
 	</view>
 	<view class="feature-container">
 		<view class="feature-content border-bottom border-top">

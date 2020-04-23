@@ -1,10 +1,10 @@
 {
   "pages":[
+    "pages/per/per",
+    "pages/tra/tra",
     "pages/id/id",
     "pages/inSchoool/inSchool",
     "pages/healthyTable/healthyTable",
-    "pages/tra/tra",
-    "pages/per/per",
     "pages/inf/inf",
     "pages/index/index",
     "pages/logs/logs"
