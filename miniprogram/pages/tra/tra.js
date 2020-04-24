@@ -15,7 +15,26 @@ Page({
     customStyles: [
       { text: '墨渊', value: MOYUAN_KEY, icon: `${CDN_PATH}/iconMapMoyuan@3x.png` },
     ],
-    keyIndex: 0
+    keyIndex: 0,
+    active: -1,
+    steps: [
+      {
+        // text: '步骤一',
+        desc: '输入起点'
+      },
+      {
+        // text: '步骤二',
+        desc: '输入终点'
+      },
+      {
+        // text: '步骤三',
+        desc: '票据上传'
+      },
+      {
+        // text: '步骤四',
+        desc: '提交'
+      }
+    ],
   },
 
   /**

@@ -11,7 +11,7 @@ navigator {
 .table {
   /* border: 1px solid red; */
   margin: 10px auto;
-  box-shadow: 2px 2px 8px #DDD;
+  box-shadow: 2px 2px 8px #ddd;
 }
 .table image {
   /* border: 1px solid red; */
@@ -21,19 +21,20 @@ navigator {
   font-size: 1.2em;
 }
 .page__hd {
-  padding: 5rpx;
-  box-shadow: 1px 1px 10px #DDD;
+  /* padding: 5rpx; */
+  /* font-size: 0.5em; */
+  box-shadow: 1px 1px 10px #ddd;
 }
-.page__title{
+.page__title {
   font-weight: bold;
   text-indent: 2em;
 }
 .page__desc view {
   background-color: rgb(101, 145, 241);
-	width: 20rem;
-	margin: 10rpx auto;
-	text-align: center;
+  width: 20rem;
+  margin: 10rpx auto;
+  text-align: center;
   /* font-weight: bold; */
-  padding:0 2rem;
+  padding: 0 2rem;
   border-radius: 10rpx;
 }

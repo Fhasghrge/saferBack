@@ -8,25 +8,13 @@
 <!-- index.wxml -->
 <view id="page" data-weui-theme="{{theme}}">
     <view class="page__hd">
-        <view class="page__title">进行流程：</view>
-        <view class="page__desc">
-            <view>1.首先在学习西门门口核实进校资格，你需要出示你的天府健康码;</view>
-            <view>2.填报健康状况信息表；</view>
-            <view>3.领取你的进校审批单；</view>
-            <view>4.宿舍入住办理；</view>
-            <view>5.确认报备。</view>
-        </view>
+        <van-steps steps="{{ steps }}" active="{{ active }}" active-color="#EA9518" />
     </view>
     <view class="weui-panel__bd" style="width:90%;margin:auto;">
         <view class="table">
-            <navigator 
-            bindtap="onCheckAuth" 
-            class="weui-media-box weui-media-box_appmsg" 
-            hover-class="weui-cell_active">
+            <navigator bindtap="onCheckAuth" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
                 <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                    <image 
-                    class="weui-media-box__thumb" 
-                    src="../../images/chengdu_table.png" />
+                    <image class="weui-media-box__thumb" src="../../images/chengdu_table.png" />
                 </view>
                 <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
                     <view class="navTitle">天府健康通</view>
@@ -36,14 +24,9 @@
         </view>
         <!-- 订阅打卡推送 -->
         <view class="table">
-            <navigator
-            url="../healthyTable/healthyTable"
-            class="weui-media-box weui-media-box_appmsg" 
-            hover-class="weui-cell_active">
+            <navigator url="../healthyTable/healthyTable" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
                 <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                    <image 
-                    class="weui-media-box__thumb" 
-                    src="../../images/health_table.png" />
+                    <image class="weui-media-box__thumb" src="../../images/health_table.png" />
                 </view>
                 <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
                     <view class="navTitle">健康状况信息表</view>
@@ -52,14 +35,9 @@
             </navigator>
         </view>
         <view class="table">
-            <navigator 
-            url="../inSchoool/inSchool"
-            class="weui-media-box weui-media-box_appmsg" 
-            hover-class="weui-cell_active">
+            <navigator url="../inSchoool/inSchool" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
                 <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                    <image 
-                    class="weui-media-box__thumb" 
-                    src="../../images/check_table.png" />
+                    <image class="weui-media-box__thumb" src="../../images/check_table.png" />
                 </view>
                 <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
                     <view class="navTitle">进校审批单</view>
@@ -68,14 +46,9 @@
             </navigator>
         </view>
         <view class="table">
-            <navigator 
-            bindtap="onCheckAuth" 
-            class="weui-media-box weui-media-box_appmsg" 
-            hover-class="weui-cell_active">
+            <navigator bindtap="onCheckAuth" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
                 <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                    <image 
-                    class="weui-media-box__thumb" 
-                    src="../../images/house_table.png" />
+                    <image class="weui-media-box__thumb" src="../../images/house_table.png" />
                 </view>
                 <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
                     <view class="navTitle">宿舍入住办理</view>
@@ -85,6 +58,8 @@
         </view>
     </view>
     <view class="weui-form__opr-area" style="margin-top:50rpx">
-        <a class="weui-btn weui-btn_primary">确认报备</a>
+        <a class="weui-btn weui-btn_primary btn-commit" style="background-color: rgb(234, 149, 24)">
+            确认报备
+        </a>
     </view>
 </view>

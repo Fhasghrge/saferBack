@@ -5,16 +5,33 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    active: -1,
+    steps: [
+      {
+        // text: '步骤二',
+        desc: '健康码'
+      },
+      {
+        // text: '步骤三',
+        desc: '健康信息表'
+      },
+      {
+        // text: '步骤四',
+        desc: '进校审批单'
+      },
+      {
+        desc: '宿舍入住'
+      }
+    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      wx.showToast({
-        title: '请确定你已经到达学校西门！',
-      })
+    wx.showToast({
+      title: '请确定你已经到达学校西门！',
+    })
   },
 
   /**
@@ -65,7 +82,7 @@ Page({
   onShareAppMessage: function () {
 
   },
-  onCheckAuth:function(){
+  onCheckAuth: function () {
     wx.navigateToMiniProgram({
       appId: 'wx34b9f47827e4801d',//要打开的小程序 appId
       path: '',//打开的页面路径，如果为空则打开首页

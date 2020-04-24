@@ -1,7 +1,7 @@
 {
-  "pages":[
-    "pages/per/per",
+  "pages": [
     "pages/tra/tra",
+    "pages/per/per",
     "pages/id/id",
     "pages/inSchoool/inSchool",
     "pages/healthyTable/healthyTable",
@@ -9,39 +9,39 @@
     "pages/index/index",
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Back",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "list": [{
-      "pagePath": "pages/id/id",
-      "text": "身份认证",
-      "iconPath": "images/id.png",
-      "selectedIconPath": "images/id_active.png"
-    },
-    {
-      "pagePath": "pages/tra/tra",
-      "text": "行程报告",
-      "iconPath": "images/location.png",
-      "selectedIconPath": "images/location_active.png"
-    },
-    {
-      "pagePath": "pages/per/per",
-      "text": "进校啦",
-      "iconPath": "images/school.png",
-      "selectedIconPath": "images/school_active.png"
-    },
-    {
-      "pagePath": "pages/inf/inf",
-      "text": "个人信息",
-      "iconPath": "images/person.png",
-      "selectedIconPath": "images/person_active.png"
-    }
-
-  ]
+    "list": [
+      {
+        "pagePath": "pages/id/id",
+        "text": "身份认证",
+        "iconPath": "images/id.png",
+        "selectedIconPath": "images/id_active.png"
+      },
+      {
+        "pagePath": "pages/tra/tra",
+        "text": "行程报告",
+        "iconPath": "images/location.png",
+        "selectedIconPath": "images/location_active.png"
+      },
+      {
+        "pagePath": "pages/per/per",
+        "text": "进校啦",
+        "iconPath": "images/school.png",
+        "selectedIconPath": "images/school_active.png"
+      },
+      {
+        "pagePath": "pages/inf/inf",
+        "text": "个人信息",
+        "iconPath": "images/person.png",
+        "selectedIconPath": "images/person_active.png"
+      }
+    ]
   },
   "navigateToMiniProgramAppIdList": [
     "wxb032bc789053daf4",
