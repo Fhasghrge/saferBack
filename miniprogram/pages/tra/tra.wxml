@@ -31,13 +31,6 @@
                 <image class="right-arrow" src="{{imgs.rightArrow}}"></image>
             </view>
         </view>
-        <view class="feature-content border-bottom">
-            <text class="feature-label">显示导航</text>
-            <switch class="feature-switch" color="#ea9518" checked="{{isNavigate}}" bindchange="onChangeNavigate"></switch>
-        </view>
-    </view>
-    <view class="primary-btn mt30" bindtap="onWatchDemo" style="background-color: rgb(234, 149, 24)">
-        查看路程
     </view>
 </view>
 <view class="page" data-weui-theme="{{theme}}">

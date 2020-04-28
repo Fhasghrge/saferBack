@@ -1,46 +1,47 @@
 <view class="page" data-weui-theme="{{theme}}">
-	<view class="page__bd">
-
-		<view class="weui-cells">
-			<view class="weui-cell weui-cell_active">
-				<view class="weui-cell__hd" style="position: relative; margin-right: 10px;">
-					<image src="{{userInfo.avatarUrl}}" mode="cover" class="userinfo-avatar"></image>
-					<!-- <text class="weui-badge" style="position: absolute; top: -0.4em; right: -0.4em;">8</text> -->
-				</view>
-				<view class="weui-cell__bd">
-					<view class="userinfo-nickname">{{userInfo.nickName}}</view>
-					<view style="font-size: 13px; color: #888;"></view>
-				</view>
-			</view>
-			<view class="weui-cell weui-cell_active weui-cell_access">
-				<view class="weui-cell__bd">
-					<text style="vertical-align: middle;">学生个人信息</text>
-				
-				</view>
-				<view class="weui-cell__ft"></view>
-			</view>
-			<view class="weui-cell weui-cell_active weui-cell_access">
-				<view class="weui-cell__bd" bindtap="bindViewTap">
-					<text style="vertical-align: middle;" >疫情查看-腾讯健康小程序</text>
-<!-- <navigator class='miniprogram-btn' target="miniProgram" open-type='navigate' app-id='wxd948ff445451749804' path='pages/index/index'>疫情查看-腾讯健康小程序</navigator> -->
-
-				</view>
-				<view class="weui-cell__ft"></view>
-			</view>
-      <view class="weui-cell weui-cell_active weui-cell_access">
-				<view class="weui-cell__bd">
-					<text style="vertical-align: middle;">每日健康签到</text>
-				
-				</view>
-				<view class="weui-cell__ft"></view>
-			</view>
-			<view class="weui-cell weui-cell_active weui-cell_access">
+		<view class="page__bd">
+				<view class="weui-cells">
+						<view class="weui-cell weui-cell_active">
+								<view class="weui-cell__hd" style="position: relative; margin-right: 10px;">
+										<image src="{{userInfo.avatarUrl}}" mode="cover" class="userinfo-avatar"></image>
+										<!-- <text class="weui-badge" style="position: absolute; top: -0.4em; right: -0.4em;">8</text> -->
+								</view>
+								<view class="weui-cell__bd">
+										<view class="userinfo-nickname">{{userInfo.nickName}}</view>
+										<view style="font-size: 13px; color: #888;"></view>
+								</view>
+						</view>
+						<navigator url="../personInfo/personInfo">
+								<view class="weui-cell weui-cell_active weui-cell_access">
+										<view class="weui-cell__bd">
+												<text style="vertical-align: middle;">学生个人信息</text>
+										</view>
+										<view class="weui-cell__ft"></view>
+								</view>
+						</navigator>
+						<!-- for simply, annotation it -->
+						<!-- <view class="weui-cell weui-cell_active weui-cell_access">
+								<view class="weui-cell__bd" bindtap="bindViewTap">
+										<text style="vertical-align: middle;">疫情查看-腾讯健康小程序</text>
+										<navigator class='miniprogram-btn' target="miniProgram" open-type='navigate' app-id='wxd948ff445451749804' path='pages/index/index'>疫情查看-腾讯健康小程序</navigator>
+								</view>
+								<view class="weui-cell__ft"></view>
+						</view> -->
+						<navigator url="../daySign/daySign">
+								<view class="weui-cell weui-cell_active weui-cell_access">
+										<view class="weui-cell__bd">
+												<text style="vertical-align: middle;">每日健康签到</text>
+										</view>
+										<view class="weui-cell__ft"></view>
+								</view>
+						</navigator>
+						<!-- <view class="weui-cell weui-cell_active weui-cell_access">
 				<view class="weui-cell__bd">
 					<text style="vertical-align: middle;">收到的信息</text>
 					<text class="weui-badge" style="margin-left: 5px;">10</text>
 				</view>
 				<view class="weui-cell__ft"></view>
-			</view>
+			</view> -->
+				</view>
 		</view>
-	</view>
 </view>

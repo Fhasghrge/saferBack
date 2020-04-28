@@ -118,37 +118,6 @@ Page({
       }
     });
   },
-  //导航
-  onWatchDemo() {
-    if (!this.data.endPoint) {
-      wx.showToast({
-        title: '请选择终点位置',
-        icon: 'none',
-        duration: 1500,
-        mask: false
-      });
-      return;
-    }
-    const key = MOYUAN_KEY;
-    const referer = REFERER;
-    const endPoint = JSON.stringify(this.data.endPoint);
-    const startPoint = this.data.startPoint ? JSON.stringify(this.data.startPoint) : '';
-    const navigation = this.data.isNavigate ? 1 : 0;
-    let url = 'plugin://routePlan/index?key=' + key + '&referer=' + referer + '&endPoint=' + endPoint +
-      '&navigation=' + navigation;
-    if (startPoint) {
-      url += '&startPoint=' + startPoint;
-    }
-    wx.navigateTo({
-      url
-    });
-  },
-  //是否导航
-  onChangeNavigate(event) {
-    this.setData({
-      isNavigate: event.detail.value
-    });
-  },
   //上传文件
   chooseImage: function (e) {
     var that = this;

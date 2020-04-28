@@ -1,13 +1,16 @@
 {
   "pages": [
+    "pages/inf/inf",
+    "pages/personInfo/personInfo",
     "pages/tra/tra",
     "pages/per/per",
     "pages/id/id",
     "pages/inSchoool/inSchool",
     "pages/healthyTable/healthyTable",
-    "pages/inf/inf",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/inHouse/inHouse",
+    "pages/daySign/daySign"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -41,7 +44,8 @@
         "iconPath": "images/person.png",
         "selectedIconPath": "images/person_active.png"
       }
-    ]
+    ],
+    "selectedColor": "#ea9518"
   },
   "navigateToMiniProgramAppIdList": [
     "wxb032bc789053daf4",
