@@ -34,6 +34,15 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    isLogin: false,
+    /**
+     * Progress说明
+     * 0 游客
+     * 1 已经身份认账
+     * 2 已经行程报备
+     * 3 已经进校表单填写
+     */
+    progress: 0,
   }
 })

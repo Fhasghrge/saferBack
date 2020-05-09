@@ -1,15 +1,15 @@
 {
   "pages": [
-    "pages/inf/inf",
-    "pages/personInfo/personInfo",
-    "pages/tra/tra",
     "pages/per/per",
-    "pages/id/id",
-    "pages/inSchoool/inSchool",
     "pages/healthyTable/healthyTable",
-    "pages/index/index",
-    "pages/logs/logs",
     "pages/inHouse/inHouse",
+    "pages/inSchoool/inSchool",
+    "pages/tra/tra",
+    "pages/id/id",
+    "pages/index/index",
+    "pages/personInfo/personInfo",
+    "pages/inf/inf",
+    "pages/logs/logs",
     "pages/daySign/daySign"
   ],
   "window": {

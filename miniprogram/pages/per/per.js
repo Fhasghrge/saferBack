@@ -1,9 +1,5 @@
 // pages/per/per.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
     active: -1,
     steps: [
@@ -25,9 +21,6 @@ Page({
     ]
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
     wx.showToast({
       title: '请确定你已经到达学校西门！',
@@ -83,6 +76,7 @@ Page({
 
   },
   onCheckAuth: function () {
+    let that = this
     wx.navigateToMiniProgram({
       appId: 'wx34b9f47827e4801d',//要打开的小程序 appId
       path: '',//打开的页面路径，如果为空则打开首页
@@ -92,10 +86,42 @@ Page({
       envVersion: 'release',//要打开的小程序版本。仅在当前小程序为开发版或体验版时此参数有效。如果当前小程序是正式版，则打开的小程序必定是正式版。
       success(res) {
         // 打开成功
+        that.setData({
+          active: 0
+        })
       }
     })
 
-
-
+  },
+  onClickTwo: function () {
+    if (this.data.active === 0) {
+      this.setData({
+        active: 1
+      })
+    }
+  },
+  onClickThree: function () {
+    if (this.data.active === 1) {
+      this.setData({
+        active: 2
+      })
+    }
+  },
+  onClickFour: function () {
+    if (this.data.active === 2) {
+      this.setData({
+        active: 3
+      })
+    }
+  },
+  submit: function () {
+    /**
+     * TODO:
+     * 完成报备请求
+     * progress+ 1
+     */
+    wx.showModal({
+      title: '你已经完成所有报备！'
+    })
   }
 })

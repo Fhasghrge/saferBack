@@ -23,7 +23,7 @@
             </navigator>
         </view>
         <!-- 订阅打卡推送 -->
-        <view class="table">
+        <view bindtap='onClickTwo' class="table">
             <navigator url="../healthyTable/healthyTable" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
                 <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
                     <image class="weui-media-box__thumb" src="../../images/health_table.png" />
@@ -34,7 +34,7 @@
                 </view>
             </navigator>
         </view>
-        <view class="table">
+        <view bindtap='onClickThree' class="table">
             <navigator url="../inSchoool/inSchool" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
                 <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
                     <image class="weui-media-box__thumb" src="../../images/check_table.png" />
@@ -45,7 +45,7 @@
                 </view>
             </navigator>
         </view>
-        <view class="table">
+        <view class="table" bindtap='onClickFour'>
             <navigator url="../inHouse/inHouse" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
                 <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
                     <image class="weui-media-box__thumb" src="../../images/house_table.png" />
@@ -58,7 +58,7 @@
         </view>
     </view>
     <view class="weui-form__opr-area" style="margin-top:50rpx">
-        <a class="weui-btn weui-btn_primary btn-commit" style="background-color: rgb(234, 149, 24)">
+        <a class="weui-btn weui-btn_primary btn-commit" style="background-color: rgb(234, 149, 24)" bindtap='submit'>
             确认报备
         </a>
     </view>

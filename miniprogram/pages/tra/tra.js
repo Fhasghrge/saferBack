@@ -37,9 +37,6 @@ Page({
     ],
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
     // wx.showModal({
     //   title: '提示',
@@ -48,51 +45,30 @@ Page({
     // })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
   onReady: function () {
 
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
   onShow: function () {
 
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
   onHide: function () {
 
   },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
   onUnload: function () {
 
   },
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
   onPullDownRefresh: function () {
 
   },
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
   onReachBottom: function () {
 
   },
 
-  /**
-   * 用户点击右上角分享
-   */
   onShareAppMessage: function () {
 
   },
@@ -101,7 +77,8 @@ Page({
     wx.chooseLocation({
       success: (res) => {
         this.setData({
-          startPoint: res
+          startPoint: res,
+          active: 0
         });
         console.log(res)
       }
@@ -112,7 +89,8 @@ Page({
     wx.chooseLocation({
       success: (res) => {
         this.setData({
-          endPoint: res
+          endPoint: res,
+          active: 1
         });
         console.log(res)
       }
@@ -127,7 +105,8 @@ Page({
       success: async function (res) {
         // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
         that.setData({
-          files: that.data.files.concat(res.tempFilePaths)
+          files: that.data.files.concat(res.tempFilePaths),
+          active: 2
         });
         // try {
         //   const invokeRes = await wx.serviceMarket.invokeService({
@@ -172,5 +151,16 @@ Page({
       urls: this.data.files // 需要预览的图片http链接列表
     })
   },
+  submitTra: function () {
+    /**
+     * TODO:
+     * 提交表单
+     * 全局变量中进程 + 1
+     */
+    console.log('提交表单')
+    wx.switchTab({
+      url: '/pages/per/per'
+    })
+  }
 
 })

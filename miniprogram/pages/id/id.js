@@ -1,10 +1,11 @@
 // pages/id/id.js
 // const regeneratorRuntime = require('regenerator-runtime')
+
+// 为了获取全局数据
+const app = getApp()
+
 Page({
   mixins: [require("../../utils/themeChanged")],
-  /**
-   * 页面的初始数据
-   */
   // mixins: [require('../../mixin/themeChanged')],
   data: {
     topTips: true,
@@ -16,60 +17,61 @@ Page({
     bs: ''
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
 
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
   onReady: function () {
+    if (app.globalData.progress === 1) {
+      wx.switchTab({
+        url: '/pages/tra/tra',
+        success() {
+          wx.showModal({
+            title: '请报告行程',
+            content: '您已经提交个人信息'
+          })
+        }
+      })
+    }
 
   },
-
   /**
-   * 生命周期函数--监听页面显示
+   * 提交表单
    */
+  submitInfo: function () {
+    /**
+     * TODO:
+     * 根据接口提交表单
+     * 并且对全局变量中进程 + 1
+     */
+    // 提交后跳转到形成报告
+    wx.switchTab({
+      url: '/pages/tra/tra'
+    })
+  },
+
   onShow: function () {
     //   this.setData({
     //     error: '这是一个错误提示'
     // })
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
   onHide: function () {
 
   },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
   onUnload: function () {
 
   },
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
   onPullDownRefresh: function () {
 
   },
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
   onReachBottom: function () {
 
   },
 
-  /**
-   * 用户点击右上角分享
-   */
   onShareAppMessage: function () {
 
   },
