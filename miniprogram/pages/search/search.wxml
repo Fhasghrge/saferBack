@@ -1,0 +1,22 @@
+<!--pages/search/search.wxml-->
+<demo-block title="可通过下面的搜索来查询学生的入学情况，用于审批其入校资格：">
+  <van-search
+    value="{{ value }}"
+    shape="round"
+    background="#4fc08d"
+    placeholder="请输入学生的姓名或者学号"
+    bind:search="onSearch"
+  />
+</demo-block>
+<demo-block title="学生信息：" >
+  <view style="width:100%;height:80%;" hidden="{{visble}}" >
+   <view><text class="display:block">姓名：{{name}}</text></view>
+    <view><text class="display:block">年龄：{{age}}</text></view>
+     <view><text class="display:block">学院：{{xueyuan}}</text></view>
+  </view>
+  
+</demo-block>
+<demo-block title="审批管理：">
+    <view style="width:100%;height:300px;"></view>
+</demo-block>
+
