@@ -1,0 +1,31 @@
+<!--pages/choose/choose.wxml-->
+<view class="sutend">
+<view>
+<van-image
+  src="https://img.yzcdn.cn/vant/cat.jpeg"
+  round
+  width="5rem"
+  height="5rem"
+  fit="cover"
+  bindclick="tostuet"
+/>
+</view>
+<view class="stxt">
+<text>我是学生</text>
+</view>
+</view>
+<view class="teacher">
+<view>
+<van-image
+  src="https://img.yzcdn.cn/vant/cat.jpeg"
+  round
+  width="5rem"
+  height="5rem"
+  fit="cover"
+  bindclick="totecher"
+/>
+</view>
+<view class="ttxt">
+<text>我是老师</text>
+</view>
+</view>
