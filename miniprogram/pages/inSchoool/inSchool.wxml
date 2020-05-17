@@ -1,7 +1,7 @@
 <view>
-<view id="in-header">进校审批单</view>
-<view id="in-mian">
-  表单等待设计稿
-</view>
-<view id="in-footer">备注： 入住宿舍之后应将此表交至学生辅导员处</view>
+  <view id="in-header">
+    <text>请依次在以下部门审核：</text>
+    <van-steps steps="{{ steps }}" active="{{ active }}" active-color="#EA9518" />
+  </view>
+  <view id="in-mian">二维码</view>
 </view>

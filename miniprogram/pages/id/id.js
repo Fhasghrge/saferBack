@@ -11,15 +11,17 @@ Page({
     topTips: true,
     files: [],
     sname: '',
+    // 学号
     sid: '',
+    // 院系
     sxy: '',
+    // 学校
     sch: '',
+    // 本硕
     bs: ''
   },
 
-  onLoad: function (options) {
-
-  },
+  onLoad: function (options) { },
 
   onReady: function () {
     if (app.globalData.progress === 1) {
@@ -37,16 +39,46 @@ Page({
   },
   /**
    * 提交表单
+   * 根据接口提交表单
+   * 并且对全局变量中进程 + 1
+   * 提交后跳转到形成报告
    */
   submitInfo: function () {
-    /**
-     * TODO:
-     * 根据接口提交表单
-     * 并且对全局变量中进程 + 1
-     */
-    // 提交后跳转到形成报告
-    wx.switchTab({
-      url: '/pages/tra/tra'
+  /**
+   * 做表单校验
+   */
+    wx.cloud.callFunction({
+      name: 'basicinfo',
+      data: {
+        name: this.data.sname,
+        num: this.data.sid,
+        department: this.data.sxy,
+        degree: this.data.bs,
+        school: this.data.sch
+      },
+      success: (res) => {
+        app.globalData.userInfo = this.data
+        app.globalData.progress = 1
+        wx.showToast({
+          title: '提交成功',
+          icon: 'success',
+          duration: 2000,
+          success: () => {
+            setTimeout(() => {
+              wx.switchTab({
+                url: '/pages/tra/tra'
+              })
+            }, 2000);
+          }
+        })
+      },
+      fail: err => {
+        wx.showToast({
+          title: '提交失败',
+          icon: 'none',
+          duration:2000
+        })
+      }
     })
   },
 

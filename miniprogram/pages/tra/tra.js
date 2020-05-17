@@ -2,6 +2,8 @@
 const CDN_PATH = 'https://3gimg.qq.com/lightmap/xcx/demoCenter/images';
 const MOYUAN_KEY = 'E7LBZ-LZPRJ-PX6F7-F4XSA-F3TSF-X2BLR';
 const REFERER = '蓝绘';
+
+const app = getApp()
 Page({
   // mixins: [require('../../weui-wxss-master/dist/mixin/themeChanged')],
   /**
@@ -10,7 +12,6 @@ Page({
   data: {
     startPoint: null,
     endPoint: null,
-    isNavigate: false,
     files: [],
     customStyles: [
       { text: '墨渊', value: MOYUAN_KEY, icon: `${CDN_PATH}/iconMapMoyuan@3x.png` },
@@ -153,13 +154,30 @@ Page({
   },
   submitTra: function () {
     /**
-     * TODO:
-     * 提交表单
-     * 全局变量中进程 + 1
+     * 需要进行表单校验
      */
-    console.log('提交表单')
-    wx.switchTab({
-      url: '/pages/per/per'
+    wx.cloud.callFunction({
+      name: 'route',
+      data: {
+        start: this.data.startPoint,
+        end: this.data.endPoint,
+        fileid: this.data.files
+      },
+      success: () => {
+        app.globalData.progress = 2
+        wx.showToast({
+          title: '提交成功',
+          icon: 'success',
+          duration: 2000,
+          success: () => {
+            setTimeout(() => {
+              wx.switchTab({
+                url: '/pages/per/per'
+              })
+            }, 2000);
+          }
+        })
+      } 
     })
   }
 

@@ -34,3 +34,8 @@
   display: block;
   transform: translateY(-50%);
 }
+button {
+  background-color: rgb(235, 191, 126);
+  width: 16rem;
+  margin: 3rem auto 2rem;
+}

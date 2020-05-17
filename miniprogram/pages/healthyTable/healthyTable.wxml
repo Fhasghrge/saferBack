@@ -39,8 +39,8 @@
         active-color="#07c160"
         inactive-color="#ee0a24" 
         checked="{{item.checked}}" 
-        bind:change="onChange" />
-        <!-- 这个change函数无法进行传参，垃圾玩意 -->
+        id="{{item.id}}"
+        bind:change="onChange" /> 
     </view>
     <van-cell-group>
       <van-field
@@ -51,6 +51,6 @@
         bind:change="inputMore"
       />
     </van-cell-group>
-    <van-cell icon='clock' title="{{Date}}" is-link bind:click="showTime" />
   </view>
+  <button bindtap="submit">提交</button>
 </view>

@@ -1,10 +1,14 @@
 {
   "pages": [
     "pages/per/per",
-    "pages/healthyTable/healthyTable",
-    "pages/inHouse/inHouse",
     "pages/inSchoool/inSchool",
     "pages/tra/tra",
+    "pages/healthyTable/healthyTable",
+    "pages/choose/choose",
+    "pages/search/search",
+    "pages/techars/techars",
+    "pages/tec/tec",
+    "pages/inHouse/inHouse",
     "pages/id/id",
     "pages/index/index",
     "pages/personInfo/personInfo",
