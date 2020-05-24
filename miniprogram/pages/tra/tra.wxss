@@ -81,7 +81,7 @@
 }
 .introduce {
 	/* border: 1px solid red; */
-	margin: 5rpx;
+	/* margin: 5rpx; */
 	box-shadow: 1px 1px 10px #DDD;
 }
 .introduce text {

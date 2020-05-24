@@ -22,9 +22,6 @@ Page({
   },
 
   onLoad: function (options) {
-    wx.showToast({
-      title: '请确定你已经到达学校西门！',
-    })
   },
 
   /**
@@ -109,8 +106,20 @@ Page({
   },
   onClickFour: function () {
     if (this.data.active === 2) {
-      this.setData({
-        active: 3
+      wx.showToast({
+        title: '请在门口登记',
+        icon: 'success',
+        duration: 2000,
+        success: () => {
+          setTimeout(() => {
+            this.setData({
+              active: 3
+            })
+            wx.switchTab({
+              url: '/pages/per/per'
+            })
+          }, 2000);
+        }
       })
     }
   },

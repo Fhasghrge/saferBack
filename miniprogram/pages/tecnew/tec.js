@@ -96,7 +96,7 @@ Page({
     title: '登陆成功！',
   })
       wx.navigateTo({
-        url: '../search/search',
+        url: '../searchnew/search',
       })
 }
     else{

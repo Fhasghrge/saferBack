@@ -1,4 +1,5 @@
 // pages/choose/choose.js
+
 Page({
 
   /**
@@ -71,7 +72,7 @@ Page({
   totecher:function(){ 
     wx.navigateTo
     ({
-      url: '../tec/tec',
+      url: '../tecnew/tec',
     })
   }
 })

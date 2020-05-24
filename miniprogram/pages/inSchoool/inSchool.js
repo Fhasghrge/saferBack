@@ -9,18 +9,18 @@ Page({
     steps: [
       {
         // text: '步骤二',
-        desc: '校医院'
+        desc: '校医院审核'
       },
       {
         // text: '步骤三',
-        desc: '保卫处'
+        desc: '保卫处审核'
       },
       {
         // text: '步骤四',
-        desc: '宿管中心'
+        desc: '宿管中心审核'
       },
       {
-        desc: '学院'
+        desc: '学院审核'
       }
     ]
   },
@@ -29,7 +29,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
 
   /**
@@ -40,44 +40,11 @@ Page({
   },
 
   /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+    /**
+     * 当用户刷新的时候请求当前审核状态
+     */
   }
 })
