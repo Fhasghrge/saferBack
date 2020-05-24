@@ -1,0 +1,25 @@
+<!--pages/login/login.wxml-->
+<view class="content">
+
+  <view class="account" style="margin-top:30%">
+    <view class="title" >工号:</view>
+    <view class="num"><input bindinput="accountInput" placeholder="请输入您的教师工号" placeholder-style="color:#999999;"/></view>
+  </view>
+  <view class="hr"></view>
+  <view class="account">
+    <view class="title">密码:</view>
+    <view class="num"><input bindinput="pwdBlur" placeholder="初始密码为工号后六位" password placeholder-style="color:#999999;"/></view>
+    <!-- <view class="see">
+      <image src="/images/see.gif" style="width:35px;height:30px;"></image>
+    </view> -->
+  </view>
+<view class="hr"></view>
+<button class="btn" disabled="{{disabled}}" type="{{btnstate}}"bindtap="login">登录</button>
+<view class="operate">
+  <view>修改密码</view>
+</view>
+<!-- <view class="login">
+  <view><image src="/images/wxlogin.gif" style="width:60px;height:40px;"></image></view>
+  <view><image src="/images/qqlogin.gif" style="width:70px;height:50px;"></image></view>
+</view> -->
+</view>
